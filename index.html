@@ -284,6 +284,27 @@
             </div>
         </div>
     </div>
+    <div id="chat-container" class="shadow-lg" style="display: none; flex-direction: column;">
+        <div id="chat-header" class="d-flex justify-content-between align-items-center px-3 py-2 text-white" style="background-color: #0d6efd;">
+            <span><i class="fa-solid fa-robot me-2"></i>CV Assistant</span>
+            <button id="close-chat" class="btn btn-sm text-white"><i class="fa-solid fa-minus"></i></button>
+        </div>
+        <div id="chat-messages" class="p-3 d-flex flex-column">
+            <div class="bot-message mb-2">
+                Hi! I'm Meiring's AI assistant. Ask me about his <strong>CMPG223</strong> marks or module content!
+            </div>
+        </div>
+        <div class="chat-input-area p-2 border-top">
+            <div class="input-group">
+                <input type="text" id="chat-input" class="form-control form-control-sm" placeholder="Type a question...">
+                <button class="btn btn-primary btn-sm" id="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <button id="chat-toggle" class="btn btn-primary shadow-lg rounded-circle" style="display: none;">
+        <i class="fa-solid fa-comment-dots h3 m-0"></i>
+    </button>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="site.js" asp-append-version="true"></script>
 </body>
