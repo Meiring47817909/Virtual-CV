@@ -1,312 +1,569 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meiring's Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="site.css" asp-append-version="true" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container-fluid p-0 d-flex text-center">
-        <div class="d-flex flex-column bg-body-tertiary sidebar expanded" id="sidebar">
-            <ul class="nav nav-pills flex-column vh-100">
-                <li class="nav-item">
-                    <a href="#" class="nav-link active py-3 border-bottom rounded-0 text-black" data-bs-toggle="tab"
-                        data-bs-target="#me" onclick="addBackground()">
-                        <i class="fa-solid fa-circle-user h3"></i>
-                        <span>About Me</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link py-3 border-bottom rounded-0 text-black" data-bs-toggle="tab"
-                        data-bs-target="#cv" onclick="removeBackground()">
-                        <i class="fa-solid fa-file h3"></i>
-                        <span>Resume/CV</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link py-3 border-bottom rounded-0 text-black" data-bs-toggle="tab"
-                        data-bs-target="#projects" onclick="addBackground()">
-                        <i class="fa-solid fa-diagram-project h3"></i>
-                        <span>Projects</span>
-                    </a>
-                </li>
-                <li class="nav-item" id="toggleSidebar">
-                    <button class="nav-link btn btn-link p-3 text-dark text-decoration-none w-100">
-                        <i class="fa-solid fa-arrows-left-right h3"></i>
-                        <span>Collapse</span>
-                    </button>
-                </li>
-            </ul>
-        </div>
-        <div class="tab-content w-100" id="pageBackground">
-            <div class="tab-pane fade show active" id="me">
-                <div class="container pageMargin p-5">
-                    <div class="row row-cols-1 row-cols-lg-2 g-5">
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <div class="container">
-                                    <div class="container" style="display: flex; justify-content: center">
-                                        <div class="box-width" style="max-width: 240px">
-                                            <img src="Images/Meiring.jpg" class="rounded-circle img-fluid" alt="img">
-                                        </div>
-                                    </div>
-                                    <h2 class="text-decoration-underline">Meiring van Niekerk</h2>
-                                    <h3 class="text-decoration-underline">Junior Software Developer</h3>
-                                    <p class="lead">Hi, my name is Meiring. I’m a passionate software developer focused
-                                        on creating digital experiences that are both visually engaging and
-                                        user-friendly. I take pride in designing intuitive interfaces that not only
-                                        function seamlessly but also delight and inspire users.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <img src="https://github-readme-stats.vercel.app/api/top-langs?username=meiring47817909&show_icons=true&locale=en&layout=compact"
-                                    alt="img">
-                                <div class="card-body">
-                                    <h3 align="left">Languages and Tools:</h3>
-                                    <p align="left">
-                                        <a href="https://angular.io" target="_blank" rel="noreferrer">
-                                            <img src="https://angular.io/assets/images/logos/angular/angular.svg"
-                                                alt="angular" width="40" height="40" />
-                                        </a>
-                                        <a href="https://angular.io" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original-wordmark.svg"
-                                                alt="angularjs" width="40" height="40" />
-                                        </a>
-                                        <a href="https://azure.microsoft.com/en-in/" target="_blank" rel="noreferrer">
-                                            <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg"
-                                                alt="azure" width="40" height="40" />
-                                        </a>
-                                        <a href="https://getbootstrap.com" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
-                                                alt="bootstrap" width="40" height="40" />
-                                        </a>
-                                        <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
-                                                alt="cplusplus" width="40" height="40" />
-                                        </a>
-                                        <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"
-                                                alt="csharp" width="40" height="40" />
-                                        </a>
-                                        <a href="https://dotnet.microsoft.com/" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg"
-                                                alt="dotnet" width="40" height="40" />
-                                        </a>
-                                        <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
-                                            <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
-                                                alt="git" width="40" height="40" />
-                                        </a>
-                                        <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-                                                alt="html5" width="40" height="40" />
-                                        </a>
-                                        <a href="https://www.java.com" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
-                                                alt="java" width="40" height="40" />
-                                        </a>
-                                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                                            target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-                                                alt="javascript" width="40" height="40" />
-                                        </a>
-                                        <a href="https://www.microsoft.com/en-us/sql-server" target="_blank"
-                                            rel="noreferrer">
-                                            <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
-                                                alt="mssql" width="40" height="40" />
-                                        </a>
-                                        <a href="https://nodejs.org" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
-                                                alt="nodejs" width="40" height="40" />
-                                        </a>
-                                        <a href="https://www.oracle.com/" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg"
-                                                alt="oracle" width="40" height="40" />
-                                        </a>
-                                        <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
-                                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-                                                alt="typescript" width="40" height="40" />
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm border-0">
-                                <div class="container" style="display: flex; justify-content: center">
-                                    <div class="box-width" style="max-width: 200px">
-                                        <img src="Images/NWU_logo1.png" class="rounded-circle img-fluid" alt="img">
-                                    </div>
-                                </div>
-                                <h4>Bachelor of Science in Information Technology</h4>
-                                <h4><span class="text-light bg-secondary">Expected in 2025-12</span></h4><br>
-                                <h5>School of Computer Science and Information Systems</h5>
-                                <h5>Faculty of Natural and Agricultural Sciences</h5>
-                                <h5>North-West University (NWU)</h5><br>
-                                <div class="col-auto d-sm-block flex" style="background-color: rgb(108, 61, 145);">
-                                    <img src="Images/NWU_logo2.png" class="featurette-image" style="height: 50px;"
-                                        alt="img">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="row row-cols-1 g-5">
-                                <div class="col">
-                                    <div class="card shadow-sm">
-                                        <div class="container" id="contact">
-                                            <div>
-                                                <h2 class="text-decoration-underline" style="text-align: left">Contact
-                                                    details</h2>
-                                                <ul class="lead" style="text-align: left">
-                                                    <li>Email: <a
-                                                            href="mailto:Meiring0505@gmail.com">Meiring0505@gmail.com</a>
-                                                    </li>
-                                                    <li>Phone number: (+27) 067 028 7985</li>
-                                                    <li>Cape Town, South Africa</li>
-                                                    <li><i class="fa-brands fa-linkedin h4"></i> LinkedIn: <a
-                                                            href="https://www.linkedin.com/in/meiring-van-niekerk">https://www.linkedin.com/in/meiring-van-niekerk</a>
-                                                    </li>
-                                                    <li><i class="fa-brands fa-github h4"></i> GitHub: <a
-                                                            href="https://github.com/Meiring47817909">https://github.com/Meiring47817909</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card shadow-sm border-0">
-                                        <div class="col p-4 d-flex flex-column position-static">
-                                            <h2 class="text-decoration-underline">Hobby</h2>
-                                            <p class="lead"><i class="fa-solid fa-bolt-lightning h4"></i> Squash — a
-                                                fun, high-energy sport that
-                                                challenges your reflexes, sharpens your focus, and keeps you fit! I am a
-                                                member at <a
-                                                    href="https://community-services.blaauwberg.net/sport-clubs/squash-clubs-western-cape/kuilsriver-squash-club">Kuils
-                                                    River Squash club.</a></p>
-                                        </div>
-                                        <div class="col-auto d-sm-block flex">
-                                            <img src="Images/Squash.avif" class="featurette-image"
-                                                style="height: 200px; width: 100%;" alt="img">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+      <div
+        class="d-flex flex-column bg-body-tertiary sidebar expanded"
+        id="sidebar"
+      >
+        <ul class="nav nav-pills flex-column vh-100">
+          <li class="nav-item">
+            <a
+              href="#"
+              class="nav-link active py-3 border-bottom rounded-0 text-black"
+              data-bs-toggle="tab"
+              data-bs-target="#me"
+              onclick="addBackground()"
+            >
+              <i class="fa-solid fa-circle-user h3"></i>
+              <span>About Me</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="#"
+              class="nav-link py-3 border-bottom rounded-0 text-black"
+              data-bs-toggle="tab"
+              data-bs-target="#cv"
+              onclick="removeBackground()"
+            >
+              <i class="fa-solid fa-file h3"></i>
+              <span>Resume/CV</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="#"
+              class="nav-link py-3 border-bottom rounded-0 text-black"
+              data-bs-toggle="tab"
+              data-bs-target="#projects"
+              onclick="addBackground()"
+            >
+              <i class="fa-solid fa-diagram-project h3"></i>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li class="nav-item" id="toggleSidebar">
+            <button
+              class="nav-link btn btn-link p-3 text-dark text-decoration-none w-100"
+            >
+              <i class="fa-solid fa-arrows-left-right h3"></i>
+              <span>Collapse</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-content w-100" id="pageBackground">
+        <div class="tab-pane fade show active" id="me">
+          <div class="container pageMargin p-5">
+            <div class="row row-cols-1 row-cols-lg-2 g-5">
+              <div class="col">
+                <div class="card shadow-sm">
+                  <div class="container">
+                    <div
+                      class="container"
+                      style="display: flex; justify-content: center"
+                    >
+                      <div class="box-width" style="max-width: 240px">
+                        <img
+                          src="Images/Meiring.jpg"
+                          class="rounded-circle img-fluid"
+                          alt="img"
+                        />
+                      </div>
                     </div>
+                    <h2 class="text-decoration-underline">
+                      Meiring van Niekerk
+                    </h2>
+                    <h3 class="text-decoration-underline">
+                      Junior Software Developer
+                    </h3>
+                    <p class="lead">
+                      Hi, my name is Meiring. I’m a passionate software
+                      developer focused on creating digital experiences that are
+                      both visually engaging and user-friendly. I take pride in
+                      designing intuitive interfaces that not only function
+                      seamlessly but also delight and inspire users.
+                    </p>
+                  </div>
                 </div>
-            </div>
-            <div class="tab-pane fade show" id="cv">
-                <iframe src="Meiring_van_Niekerk_CV.pdf" frameborder="0" style="display: block;"
-                    class="w-100 vh-100"></iframe>
-            </div>
-            <div class="tab-pane fade show" id="projects">
-                <div class="container pageMargin p-5">
-                    <div class="row row-cols-1 row-cols-lg-2 g-5">
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <img src="Images/Dreamflix_Cinema.jpeg" alt="img">
-                                <div class="card-body">
-                                    <h3 class="text-decoration-underline">DREAMFLIX Cinema</h3>
-                                    <p class="card-text lead">DREAMFLIX Cinema is a hypothetical cinema that requires a
-                                        desktop application for employees to book tickets for customers and reporting
-                                        functionality for strategic decision making. Additionally, employees can be
-                                        managed, and new movies can be added.</p>
-                                    <h4 style="text-align: left">Visual studio 2022:</h4>
-                                    <ul class="lead" style="text-align: left">
-                                        <li>Windows Forms App</li>
-                                    </ul>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <button
-                                            onclick="document.location='https://github.com/CMPG223-GROUP6/CMPG223-Project'"
-                                            type="button" class="btn btn-lg btn-outline-secondary">
-                                            View repository
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <img src="Images/Brighton_Medical.jpeg" alt="img">
-                                <div class="card-body">
-                                    <h3 class="text-decoration-underline">Brighton Medical</h3>
-                                    <p class="card-text lead">This application was developed for a hypothetical medical
-                                        practice called Brighton Medical that would like to create desktop and web
-                                        applications that would allow people to search, book and view doctor’s
-                                        appointments.</p>
-                                    <h4 style="text-align: left">Visual studio 2022:</h4>
-                                    <ul class="lead" style="text-align: left">
-                                        <li>Windows Forms App</li>
-                                        <li>ASP.NET Web Application (.NET Framework)</li>
-                                    </ul>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <button
-                                            onclick="document.location='https://github.com/Meiring47817909/MedicalPractice'"
-                                            type="button" class="btn btn-lg btn-outline-secondary">
-                                            View repository
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <img src="Images/Carwash_business.jpeg" alt="img">
-                                <div class="card-body">
-                                    <h3 class="text-decoration-underline">Carwash business model</h3>
-                                    <p class="card-text lead">This project entails the necessary SQL scripts to operate
-                                        a carwash business that stores employee, manager, car, customer, washer and
-                                        transaction information. Includes Table and View create statements with
-                                        supplemented data and queries for reporting purposes.</p>
-                                    <h4 style="text-align: left">Oracle:</h4>
-                                    <ul class="lead" style="text-align: left">
-                                        <li>SQL</li>
-                                    </ul>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <button
-                                            onclick="document.location='https://github.com/Meiring47817909/CarwashBusinessModel'"
-                                            type="button" class="btn btn-lg btn-outline-secondary">
-                                            View repository
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img
+                    src="https://github-readme-stats.vercel.app/api/top-langs?username=meiring47817909&show_icons=true&locale=en&layout=compact"
+                    alt="img"
+                  />
+                  <div class="card-body">
+                    <h3 align="left">Languages and Tools:</h3>
+                    <p align="left">
+                      <a
+                        href="https://angular.io"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src="https://angular.io/assets/images/logos/angular/angular.svg"
+                          alt="angular"
+                          width="40"
+                          height="40"
+                        />
+                      </a>
+                      <a
+                        href="https://angular.io"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original-wordmark.svg"
+                          alt="angularjs"
+                          width="40"
+                          height="40"
+                        />
+                      </a>
+                      <a
+                        href="https://azure.microsoft.com/en-in/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg"
+                          alt="azure"
+                          width="40"
+                          height="40"
+                        />
+                      </a>
+                      <a
+                        href="https://getbootstrap.com"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
+                          alt="bootstrap"
+                          width="40"
+                          height="40"
+                        />
+                      </a>
+                      <a
+                        href="https://www.w3schools.com/cpp/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
+                          alt="cplusplus"
+                          width="40"
+                          height="40"
+                        />
+                      </a>
+                      <a
+                        href="https://www.w3schools.com/cs/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"
+                          alt="csharp"
+                          width="40"
+                          height="40"
+                        />
+                      </a>
+                      <a
+                        href="https://dotnet.microsoft.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg"
+                          alt="dotnet"
+                          width="40"
+                          height="40"
+                        />
+                      </a>
+                      <a
+                        href="https://git-scm.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+                          alt="git"
+                          width="40"
+                          height="40"
+                        />
+                      </a>
+                      <a
+                        href="https://www.w3.org/html/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+                          alt="html5"
+                          width="40"
+                          height="40"
+                        />
+                      </a>
+                      <a
+                        href="https://www.java.com"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+                          alt="java"
+                          width="40"
+                          height="40"
+                        />
+                      </a>
+                      <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                          alt="javascript"
+                          width="40"
+                          height="40"
+                        />
+                      </a>
+                      <a
+                        href="https://www.microsoft.com/en-us/sql-server"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
+                          alt="mssql"
+                          width="40"
+                          height="40"
+                        />
+                      </a>
+                      <a
+                        href="https://nodejs.org"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+                          alt="nodejs"
+                          width="40"
+                          height="40"
+                        />
+                      </a>
+                      <a
+                        href="https://www.oracle.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg"
+                          alt="oracle"
+                          width="40"
+                          height="40"
+                        />
+                      </a>
+                      <a
+                        href="https://www.typescriptlang.org/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+                          alt="typescript"
+                          width="40"
+                          height="40"
+                        />
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm border-0">
+                  <div
+                    class="container"
+                    style="display: flex; justify-content: center"
+                  >
+                    <div class="box-width" style="max-width: 200px">
+                      <img
+                        src="Images/NWU_logo1.png"
+                        class="rounded-circle img-fluid"
+                        alt="img"
+                      />
                     </div>
+                  </div>
+                  <h4>Bachelor of Science in Information Technology</h4>
+                  <h4>
+                    <span class="text-light bg-secondary"
+                      >Expected in 2025-12</span
+                    >
+                  </h4>
+                  <br />
+                  <h5>School of Computer Science and Information Systems</h5>
+                  <h5>Faculty of Natural and Agricultural Sciences</h5>
+                  <h5>North-West University (NWU)</h5>
+                  <br />
+                  <div
+                    class="col-auto d-sm-block flex"
+                    style="background-color: rgb(108, 61, 145)"
+                  >
+                    <img
+                      src="Images/NWU_logo2.png"
+                      class="featurette-image"
+                      style="height: 50px"
+                      alt="img"
+                    />
+                  </div>
                 </div>
+              </div>
+              <div class="col">
+                <div class="row row-cols-1 g-5">
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      <div class="container" id="contact">
+                        <div>
+                          <h2
+                            class="text-decoration-underline"
+                            style="text-align: left"
+                          >
+                            Contact details
+                          </h2>
+                          <ul class="lead" style="text-align: left">
+                            <li>
+                              Email:
+                              <a href="mailto:Meiring0505@gmail.com"
+                                >Meiring0505@gmail.com</a
+                              >
+                            </li>
+                            <li>Phone number: (+27) 067 028 7985</li>
+                            <li>Cape Town, South Africa</li>
+                            <li>
+                              <i class="fa-brands fa-linkedin h4"></i> LinkedIn:
+                              <a
+                                href="https://www.linkedin.com/in/meiring-van-niekerk"
+                                >https://www.linkedin.com/in/meiring-van-niekerk</a
+                              >
+                            </li>
+                            <li>
+                              <i class="fa-brands fa-github h4"></i> GitHub:
+                              <a href="https://github.com/Meiring47817909"
+                                >https://github.com/Meiring47817909</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card shadow-sm border-0">
+                      <div class="col p-4 d-flex flex-column position-static">
+                        <h2 class="text-decoration-underline">Hobby</h2>
+                        <p class="lead">
+                          <i class="fa-solid fa-bolt-lightning h4"></i> Squash —
+                          a fun, high-energy sport that challenges your
+                          reflexes, sharpens your focus, and keeps you fit! I am
+                          a member at
+                          <a
+                            href="https://community-services.blaauwberg.net/sport-clubs/squash-clubs-western-cape/kuilsriver-squash-club"
+                            >Kuils River Squash club.</a
+                          >
+                        </p>
+                      </div>
+                      <div class="col-auto d-sm-block flex">
+                        <img
+                          src="Images/Squash.avif"
+                          class="featurette-image"
+                          style="height: 200px; width: 100%"
+                          alt="img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="tab-pane fade show" id="cv">
+          <iframe
+            src="Meiring_van_Niekerk_CV.pdf"
+            frameborder="0"
+            style="display: block"
+            class="w-100 vh-100"
+          ></iframe>
+        </div>
+        <div class="tab-pane fade show" id="projects">
+          <div class="container pageMargin p-5">
+            <div class="row row-cols-1 row-cols-lg-2 g-5">
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="Images/Dreamflix_Cinema.jpeg" alt="img" />
+                  <div class="card-body">
+                    <h3 class="text-decoration-underline">DREAMFLIX Cinema</h3>
+                    <p class="card-text lead">
+                      DREAMFLIX Cinema is a hypothetical cinema that requires a
+                      desktop application for employees to book tickets for
+                      customers and reporting functionality for strategic
+                      decision making. Additionally, employees can be managed,
+                      and new movies can be added.
+                    </p>
+                    <h4 style="text-align: left">Visual studio 2022:</h4>
+                    <ul class="lead" style="text-align: left">
+                      <li>Windows Forms App</li>
+                    </ul>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <button
+                        onclick="
+                          document.location =
+                            'https://github.com/CMPG223-GROUP6/CMPG223-Project'
+                        "
+                        type="button"
+                        class="btn btn-lg btn-outline-secondary"
+                      >
+                        View repository
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="Images/Brighton_Medical.jpeg" alt="img" />
+                  <div class="card-body">
+                    <h3 class="text-decoration-underline">Brighton Medical</h3>
+                    <p class="card-text lead">
+                      This application was developed for a hypothetical medical
+                      practice called Brighton Medical that would like to create
+                      desktop and web applications that would allow people to
+                      search, book and view doctor’s appointments.
+                    </p>
+                    <h4 style="text-align: left">Visual studio 2022:</h4>
+                    <ul class="lead" style="text-align: left">
+                      <li>Windows Forms App</li>
+                      <li>ASP.NET Web Application (.NET Framework)</li>
+                    </ul>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <button
+                        onclick="
+                          document.location =
+                            'https://github.com/Meiring47817909/MedicalPractice'
+                        "
+                        type="button"
+                        class="btn btn-lg btn-outline-secondary"
+                      >
+                        View repository
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="Images/Carwash_business.jpeg" alt="img" />
+                  <div class="card-body">
+                    <h3 class="text-decoration-underline">
+                      Carwash business model
+                    </h3>
+                    <p class="card-text lead">
+                      This project entails the necessary SQL scripts to operate
+                      a carwash business that stores employee, manager, car,
+                      customer, washer and transaction information. Includes
+                      Table and View create statements with supplemented data
+                      and queries for reporting purposes.
+                    </p>
+                    <h4 style="text-align: left">Oracle:</h4>
+                    <ul class="lead" style="text-align: left">
+                      <li>SQL</li>
+                    </ul>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <button
+                        onclick="
+                          document.location =
+                            'https://github.com/Meiring47817909/CarwashBusinessModel'
+                        "
+                        type="button"
+                        class="btn btn-lg btn-outline-secondary"
+                      >
+                        View repository
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="chat-container" class="shadow-lg" style="display: none; flex-direction: column;">
-        <div id="chat-header" class="d-flex justify-content-between align-items-center px-3 py-2 text-white" style="background-color: #0d6efd;">
-            <span><i class="fa-solid fa-robot me-2"></i>CV Assistant</span>
-            <button id="close-chat" class="btn btn-sm text-white"><i class="fa-solid fa-minus"></i></button>
+    <div
+      id="chat-container"
+      class="shadow-lg"
+      style="display: none; flex-direction: column"
+    >
+      <div
+        id="chat-header"
+        class="d-flex justify-content-between align-items-center px-3 py-2 text-white"
+        style="background-color: #0d6efd"
+      >
+        <span><i class="fa-solid fa-robot me-2"></i>CV Assistant</span>
+        <button id="close-chat" class="btn btn-sm text-white">
+          <i class="fa-solid fa-minus"></i>
+        </button>
+      </div>
+      <div id="chat-messages" class="p-3 d-flex flex-column">
+        <div class="bot-message mb-2">
+          Hi! I'm Meiring's AI assistant. Ask me about his
+          <strong>CMPG223</strong> marks or module content!
         </div>
-        <div id="chat-messages" class="p-3 d-flex flex-column">
-            <div class="bot-message mb-2">
-                Hi! I'm Meiring's AI assistant. Ask me about his <strong>CMPG223</strong> marks or module content!
-            </div>
+      </div>
+      <div class="chat-input-area p-2 border-top">
+        <div class="input-group">
+          <input
+            type="text"
+            id="chat-input"
+            class="form-control form-control-sm"
+            placeholder="Type a question..."
+          />
+          <button class="btn btn-primary btn-sm" id="send-btn">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
         </div>
-        <div class="chat-input-area p-2 border-top">
-            <div class="input-group">
-                <input type="text" id="chat-input" class="form-control form-control-sm" placeholder="Type a question...">
-                <button class="btn btn-primary btn-sm" id="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
-            </div>
-        </div>
+      </div>
     </div>
 
-    <button id="chat-toggle" class="btn btn-primary shadow-lg rounded-circle" style="display: none;">
-        <i class="fa-solid fa-comment-dots h3 m-0"></i>
+    <button
+      id="chat-toggle"
+      class="btn btn-primary shadow-lg rounded-circle"
+      style="display: none"
+    >
+      <i class="fa-solid fa-comment-dots h3 m-0"></i>
     </button>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="site.js" asp-append-version="true"></script>
-</body>
-
+  </body>
 </html>
