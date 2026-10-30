@@ -1355,3 +1355,34 @@ body.guide-active #chat-toggle {
     transform: none;
   }
 }
+
+/* Projects tab: year headings grouping the project cards */
+.project-year {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 56px 0 28px;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+.project-year:first-child {
+  margin-top: 0;
+}
+.project-year::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    var(--accent-border),
+    rgba(160, 200, 255, 0)
+  );
+}
+@media (max-width: 575.98px) {
+  .project-year {
+    margin: 40px 0 20px;
+    font-size: 19px;
+  }
+}
