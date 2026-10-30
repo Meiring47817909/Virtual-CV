@@ -388,6 +388,20 @@ const WAVE_PAUSE_MS = 20000;
   const chatIsOpen = () => chat.classList.contains("open");
   let player = null;
   let timer = null;
+  let playing = false;
+
+  // Arm down: rewind to the first frame of the animation, which is the
+  // robot's resting pose. Called once a wave has finished, never mid-wave,
+  // so the arm lowers instead of freezing halfway up.
+  function rest() {
+    if (!player) return;
+    player.stop(); // stop() also rewinds to frame 0
+    try {
+      player.setFrame(0);
+    } catch (e) {
+      /* older player builds rewind on stop() alone */
+    }
+  }
 
   function wave() {
     clearTimeout(timer);
@@ -409,8 +423,15 @@ const WAVE_PAUSE_MS = 20000;
       setTimeout(attach, 100);
       return;
     }
+    player.addEventListener("play", () => {
+      playing = true;
+    });
     player.addEventListener("complete", () => {
-      if (!chatIsOpen()) waveLater();
+      playing = false;
+      // If the chat opened mid-wave we let the wave play out; now that it has
+      // finished, drop the arm and stay still until the chat closes again.
+      if (chatIsOpen()) rest();
+      else waveLater();
     });
     if (player.isLoaded) wave();
     else player.addEventListener("load", wave);
@@ -421,7 +442,8 @@ const WAVE_PAUSE_MS = 20000;
     if (chatIsOpen()) {
       clearTimeout(timer);
       timer = null;
-      if (player) player.stop();
+      // Don't cut a wave off halfway - "complete" lowers the arm for us.
+      if (!playing) rest();
     } else {
       waveLater();
     }
