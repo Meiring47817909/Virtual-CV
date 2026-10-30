@@ -1,0 +1,27 @@
+# --- Chatbot backend (deployed to the Hugging Face Space, not the website)
+# Contains .env with API keys.
+meiring-cv-bot/
+.env
+interactive_cv_chat_widget.html
+
+# --- Raw CV extractions: contain ID number, date of birth and phone number
+Meiring_van_Niekerk_CV.md
+Meiring_van_Niekerk_CV - Copy.md
+
+# --- Chatbot source data (used to build the Pinecone index)
+Meiring_van_Niekerk_CV_clean.md
+Meiring_modules.md
+
+# --- NWU yearbooks and their text extractions (~28 MB, not needed by the site)
+12_2026_FNAS_*.pdf
+12_2026_FNAS_*.txt
+
+# --- Scratch
+_to_delete/
+
+# --- Python / OS clutter
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini

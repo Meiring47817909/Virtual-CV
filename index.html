@@ -12,408 +12,375 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="site.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="site.css?v=2026-10-30b" />
   </head>
 
   <body>
     <div class="container-fluid p-0 d-flex text-center">
-      <div
-        class="d-flex flex-column bg-body-tertiary sidebar expanded"
-        id="sidebar"
-      >
-        <ul class="nav nav-pills flex-column vh-100">
+      <nav class="sidebar expanded glass" id="sidebar" aria-label="Main">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">MvN</span>
+          <span class="brand-name">Meiring<br />van Niekerk</span>
+        </div>
+        <ul class="nav nav-pills flex-column side-nav">
           <li class="nav-item">
             <a
               href="#"
-              class="nav-link active py-3 border-bottom rounded-0 text-black"
+              class="nav-link side-link active"
               data-bs-toggle="tab"
               data-bs-target="#me"
               onclick="addBackground()"
             >
-              <i class="fa-solid fa-circle-user h3"></i>
+              <i class="fa-solid fa-circle-user" aria-hidden="true"></i>
               <span>About Me</span>
             </a>
           </li>
           <li class="nav-item">
             <a
               href="#"
-              class="nav-link py-3 border-bottom rounded-0 text-black"
+              class="nav-link side-link"
               data-bs-toggle="tab"
               data-bs-target="#cv"
               onclick="removeBackground()"
             >
-              <i class="fa-solid fa-file h3"></i>
-              <span>Resume/CV</span>
+              <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+              <span>Resume / CV</span>
             </a>
           </li>
           <li class="nav-item">
             <a
               href="#"
-              class="nav-link py-3 border-bottom rounded-0 text-black"
+              class="nav-link side-link"
               data-bs-toggle="tab"
               data-bs-target="#projects"
               onclick="addBackground()"
             >
-              <i class="fa-solid fa-diagram-project h3"></i>
+              <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
               <span>Projects</span>
             </a>
           </li>
-          <li class="nav-item" id="toggleSidebar">
+          <li class="nav-item mt-auto" id="toggleSidebar">
             <button
-              class="nav-link btn btn-link p-3 text-dark text-decoration-none w-100"
+              type="button"
+              class="nav-link side-link side-toggle w-100"
+              aria-label="Collapse or expand the sidebar"
             >
-              <i class="fa-solid fa-arrows-left-right h3"></i>
+              <i class="fa-solid fa-angles-left" aria-hidden="true"></i>
               <span>Collapse</span>
             </button>
           </li>
         </ul>
-      </div>
+      </nav>
       <div class="tab-content w-100" id="pageBackground">
         <div class="tab-pane fade show active" id="me">
+          <div class="page-wrap">
+            <div class="about-grid">
+              <section class="glass glass-card profile-card">
+                <img
+                  src="Images/Meiring.jpg"
+                  class="profile-photo"
+                  alt="Portrait of Meiring van Niekerk"
+                />
+                <div>
+                  <h1>Meiring van Niekerk</h1>
+                  <p class="eyebrow">Junior Software Developer</p>
+                </div>
+                <p class="bio">
+                  Hi, my name is Meiring. I’m a passionate software developer
+                  focused on creating digital experiences that are both visually
+                  engaging and user-friendly. I take pride in designing intuitive
+                  interfaces that not only function seamlessly but also delight
+                  and inspire users.
+                </p>
+                <div class="btn-row">
+                  <a
+                    class="pill-btn primary"
+                    href="Meiring_van_Niekerk_CV.pdf"
+                    download
+                    >Download CV</a
+                  >
+                  <button
+                    type="button"
+                    class="pill-btn"
+                    onclick="showTab('#projects')"
+                  >
+                    View projects
+                  </button>
+                </div>
+              </section>
+
+              <section class="glass glass-card">
+                <h2>Languages &amp; tools</h2>
+                <div class="chips">
+                  <span class="chip">C#</span>
+                  <span class="chip">.NET</span>
+                  <span class="chip">Python</span>
+                  <span class="chip">JavaScript</span>
+                  <span class="chip">TypeScript</span>
+                  <span class="chip">Angular</span>
+                  <span class="chip">AngularJS</span>
+                  <span class="chip">React</span>
+                  <span class="chip">HTML &amp; CSS</span>
+                  <span class="chip">Bootstrap</span>
+                  <span class="chip">Node.js</span>
+                  <span class="chip">Java</span>
+                  <span class="chip">C++</span>
+                  <span class="chip">SQL Server</span>
+                  <span class="chip">Oracle</span>
+                  <span class="chip">Azure</span>
+                  <span class="chip">Git &amp; GitHub</span>
+                </div>
+              </section>
+
+              <section class="glass glass-card" id="contact">
+                <h2>Contact</h2>
+                <ul class="contact-list">
+                  <li>
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    <a href="mailto:meiring0505@gmail.com">meiring0505@gmail.com</a>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    Potchefstroom / Cape Town, South Africa
+                  </li>
+                  <li>
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    <a href="https://www.linkedin.com/in/meiring-van-niekerk/" target="_blank" rel="noreferrer"
+                      >linkedin.com/in/meiring-van-niekerk</a
+                    >
+                  </li>
+                  <li>
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    <a href="https://github.com/Meiring47817909" target="_blank" rel="noreferrer"
+                      >github.com/Meiring47817909</a
+                    >
+                  </li>
+                </ul>
+              </section>
+
+              <section class="glass glass-card">
+                <h2>Education</h2>
+                <div class="edu-item">
+                  <p class="eyebrow">In progress · expected Dec 2026</p>
+                  <p class="edu-title">BSc Honours in Computer Science &amp; IT</p>
+                  <p class="edu-meta">North-West University, Potchefstroom</p>
+                </div>
+                <div class="divider"></div>
+                <div class="edu-item">
+                  <p class="eyebrow muted">Completed Dec 2025</p>
+                  <p class="edu-title">BSc Information Technology, with distinction</p>
+                  <p class="edu-meta">North-West University, Potchefstroom · GPA 82.85</p>
+                </div>
+              </section>
+
+              <section class="glass glass-card hobby-card">
+                <img src="Images/Squash.avif" alt="Squash court" />
+                <div class="hobby-body">
+                  <div class="hobby-head">
+                    <span class="icon-tile" aria-hidden="true"
+                      ><i class="fa-solid fa-table-tennis-paddle-ball"></i
+                    ></span>
+                    <h2>Hobby: Squash</h2>
+                  </div>
+                  <p>
+                    A fun, high-energy sport that challenges your reflexes,
+                    sharpens your focus, and keeps you fit! I am a member at
+                    <a
+                      href="https://community-services.blaauwberg.net/sport-clubs/squash-clubs-western-cape/kuilsriver-squash-club"
+                      target="_blank"
+                      rel="noreferrer"
+                      >Kuils River Squash Club</a
+                    >.
+                  </p>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade show" id="cv">
+          <!-- CV viewer (cv-viewer.js): PDF.js pages the assistant can highlight -->
+          <section class="cv-viewer" id="cv-viewer" aria-label="Meiring's CV">
+            <div class="cv-toolbar" role="toolbar" aria-label="CV viewer controls">
+              <span class="cv-title">Meiring van Niekerk · CV</span>
+              <span class="cv-page-label"
+                >Page <span id="cv-page-num">1</span> /
+                <span id="cv-page-count">–</span></span
+              >
+              <div class="cv-zoom">
+                <button type="button" class="cv-tool" id="cv-zoom-out" aria-label="Zoom out" title="Zoom out">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </button>
+                <span class="cv-zoom-label" id="cv-zoom-label">100%</span>
+                <button type="button" class="cv-tool" id="cv-zoom-in" aria-label="Zoom in" title="Zoom in">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </button>
+                <button type="button" class="cv-tool" id="cv-zoom-fit" aria-label="Fit to width" title="Fit to width">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path></svg>
+                </button>
+              </div>
+              <a class="cv-tool cv-download" href="Meiring_van_Niekerk_CV.pdf" download title="Download the CV">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg>
+                <span>Download</span>
+              </a>
+            </div>
+            <div class="cv-scroll" id="cv-scroll">
+              <div class="cv-pages" id="cv-pages"></div>
+              <p class="cv-status cv-loading">Loading the CV…</p>
+              <p class="cv-status cv-fallback">
+                The CV couldn't be shown here.
+                <a href="Meiring_van_Niekerk_CV.pdf" target="_blank" rel="noreferrer">Open it in a new tab</a>
+                or use Download above.
+              </p>
+            </div>
+            <!-- The chat robot's stand-in that waves at highlighted text -->
+            <div class="cv-guide" id="cv-guide" hidden aria-hidden="true">
+              <span class="cv-guide-crop">
+                <dotlottie-wc src="Images/chat-bot.lottie"></dotlottie-wc>
+              </span>
+            </div>
+          </section>
+        </div>
+        <div class="tab-pane fade show" id="projects">
           <div class="container pageMargin p-5">
             <div class="row row-cols-1 row-cols-lg-2 g-5">
               <div class="col">
                 <div class="card shadow-sm">
-                  <div class="container">
-                    <div
-                      class="container"
-                      style="display: flex; justify-content: center"
+                  <div class="video-embed">
+                    <button
+                      type="button"
+                      class="video-poster"
+                      data-video-src="https://drive.google.com/file/d/1ZIzHe9QOitbn_mwgZd196AxRelrGayqa/preview"
+                      data-video-title="SmartStock-NWU demo video"
+                      aria-label="Play the SmartStock demo video"
                     >
-                      <div class="box-width" style="max-width: 240px">
-                        <img
-                          src="Images/Meiring.jpg"
-                          class="rounded-circle img-fluid"
-                          alt="img"
-                        />
-                      </div>
-                    </div>
-                    <h2 class="text-decoration-underline">
-                      Meiring van Niekerk
-                    </h2>
-                    <h3 class="text-decoration-underline">
-                      Junior Software Developer
-                    </h3>
-                    <p class="lead">
-                      Hi, my name is Meiring. I’m a passionate software
-                      developer focused on creating digital experiences that are
-                      both visually engaging and user-friendly. I take pride in
-                      designing intuitive interfaces that not only function
-                      seamlessly but also delight and inspire users.
+                      <img
+                        src="Images/smartstock-demo-poster.jpg"
+                        alt="SmartStock dashboard with a play button"
+                        loading="lazy"
+                      />
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="text-decoration-underline">SmartStock-NWU</h3>
+                    <p class="card-text lead">
+                      Stock and loan management for the NWU IT store
+                      (BICS). Staff record stock coming in and going out,
+                      manage the product catalogue, lend equipment and track
+                      returns, with low-stock alerts, reports, an audit log
+                      and email notifications. Product photos are uploaded
+                      through the server after a role check.
                     </p>
+                    <h4 style="text-align: left">Tech stack:</h4>
+                    <ul class="lead" style="text-align: left">
+                      <li>Next.js 16 (App Router) and TypeScript</li>
+                      <li>PostgreSQL 17 with Drizzle ORM</li>
+                      <li>Firebase Auth and Storage</li>
+                      <li>Vercel and Google Cloud SQL, Vitest</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-3 align-items-center">
+                      <a
+                        class="btn btn-lg btn-outline-secondary"
+                        href="https://github.com/Meiring47817909/SmartStock-NWU"
+                        target="_blank"
+                        rel="noreferrer"
+                        >View repository</a
+                      >
+                      <a
+                        class="video-link"
+                        href="https://drive.google.com/file/d/1ZIzHe9QOitbn_mwgZd196AxRelrGayqa/view"
+                        target="_blank"
+                        rel="noreferrer"
+                        >Watch on Google Drive</a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card shadow-sm">
                   <img
-                    src="https://github-readme-stats.vercel.app/api/top-langs?username=meiring47817909&show_icons=true&locale=en&layout=compact"
-                    alt="img"
+                    src="Images/potchmatch-graph.jpg"
+                    alt="Neo4j security knowledge graph showing a user's login events linked to a brute-force alert and its mitigations"
+                    loading="lazy"
                   />
                   <div class="card-body">
-                    <h3 align="left">Languages and Tools:</h3>
-                    <p align="left">
-                      <a
-                        href="https://angular.io"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img
-                          src="https://angular.io/assets/images/logos/angular/angular.svg"
-                          alt="angular"
-                          width="40"
-                          height="40"
-                        />
-                      </a>
-                      <a
-                        href="https://angular.io"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img
-                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original-wordmark.svg"
-                          alt="angularjs"
-                          width="40"
-                          height="40"
-                        />
-                      </a>
-                      <a
-                        href="https://azure.microsoft.com/en-in/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img
-                          src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg"
-                          alt="azure"
-                          width="40"
-                          height="40"
-                        />
-                      </a>
-                      <a
-                        href="https://getbootstrap.com"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img
-                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
-                          alt="bootstrap"
-                          width="40"
-                          height="40"
-                        />
-                      </a>
-                      <a
-                        href="https://www.w3schools.com/cpp/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img
-                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
-                          alt="cplusplus"
-                          width="40"
-                          height="40"
-                        />
-                      </a>
-                      <a
-                        href="https://www.w3schools.com/cs/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img
-                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"
-                          alt="csharp"
-                          width="40"
-                          height="40"
-                        />
-                      </a>
-                      <a
-                        href="https://dotnet.microsoft.com/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img
-                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg"
-                          alt="dotnet"
-                          width="40"
-                          height="40"
-                        />
-                      </a>
-                      <a
-                        href="https://git-scm.com/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img
-                          src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
-                          alt="git"
-                          width="40"
-                          height="40"
-                        />
-                      </a>
-                      <a
-                        href="https://www.w3.org/html/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img
-                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-                          alt="html5"
-                          width="40"
-                          height="40"
-                        />
-                      </a>
-                      <a
-                        href="https://www.java.com"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img
-                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
-                          alt="java"
-                          width="40"
-                          height="40"
-                        />
-                      </a>
-                      <a
-                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img
-                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-                          alt="javascript"
-                          width="40"
-                          height="40"
-                        />
-                      </a>
-                      <a
-                        href="https://www.microsoft.com/en-us/sql-server"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img
-                          src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
-                          alt="mssql"
-                          width="40"
-                          height="40"
-                        />
-                      </a>
-                      <a
-                        href="https://nodejs.org"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img
-                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
-                          alt="nodejs"
-                          width="40"
-                          height="40"
-                        />
-                      </a>
-                      <a
-                        href="https://www.oracle.com/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img
-                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg"
-                          alt="oracle"
-                          width="40"
-                          height="40"
-                        />
-                      </a>
-                      <a
-                        href="https://www.typescriptlang.org/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img
-                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-                          alt="typescript"
-                          width="40"
-                          height="40"
-                        />
-                      </a>
+                    <h3 class="text-decoration-underline">
+                      PotchMatch: SOC monitoring and GraphRAG
+                    </h3>
+                    <p class="card-text lead">
+                      A microservices squash platform extended with a Security
+                      Operations Centre. Every service ships security events
+                      to a SOC service, five detection rules raise alerts, and
+                      the alerts are linked in a Neo4j knowledge graph to MITRE
+                      ATT&amp;CK and OWASP threats. Administrators ask questions
+                      in plain English through GraphRAG, which runs guarded,
+                      read-only Cypher and gives cited answers.
                     </p>
+                    <h4 style="text-align: left">Tech stack:</h4>
+                    <ul class="lead" style="text-align: left">
+                      <li>.NET 10, ASP.NET Core and Angular 22</li>
+                      <li>Neo4j 5 and PostgreSQL 16</li>
+                      <li>Ocelot API Gateway, Consul and Polly</li>
+                      <li>Google Gemini, Docker Compose</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-3 align-items-center">
+                      <a
+                        class="btn btn-lg btn-outline-secondary"
+                        href="https://github.com/Meiring47817909/potchmatch-soc-graphrag"
+                        target="_blank"
+                        rel="noreferrer"
+                        >View repository</a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="card shadow-sm border-0">
-                  <div
-                    class="container"
-                    style="display: flex; justify-content: center"
-                  >
-                    <div class="box-width" style="max-width: 200px">
-                      <img
-                        src="Images/NWU_logo1.png"
-                        class="rounded-circle img-fluid"
-                        alt="img"
-                      />
-                    </div>
-                  </div>
-                  <h4>Bachelor of Science in Information Technology</h4>
-                  <h4>
-                    <span class="text-light bg-secondary"
-                      >Expected in 2025-12</span
-                    >
-                  </h4>
-                  <br />
-                  <h5>School of Computer Science and Information Systems</h5>
-                  <h5>Faculty of Natural and Agricultural Sciences</h5>
-                  <h5>North-West University (NWU)</h5>
-                  <br />
-                  <div
-                    class="col-auto d-sm-block flex"
-                    style="background-color: rgb(108, 61, 145)"
-                  >
-                    <img
-                      src="Images/NWU_logo2.png"
-                      class="featurette-image"
-                      style="height: 50px"
-                      alt="img"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="row row-cols-1 g-5">
-                  <div class="col">
-                    <div class="card shadow-sm">
-                      <div class="container" id="contact">
-                        <div>
-                          <h2
-                            class="text-decoration-underline"
-                            style="text-align: left"
-                          >
-                            Contact details
-                          </h2>
-                          <ul class="lead" style="text-align: left">
-                            <li>
-                              Email:
-                              <a href="mailto:Meiring0505@gmail.com"
-                                >Meiring0505@gmail.com</a
-                              >
-                            </li>
-                            <li>Phone number: (+27) 067 028 7985</li>
-                            <li>Cape Town, South Africa</li>
-                            <li>
-                              <i class="fa-brands fa-linkedin h4"></i> LinkedIn:
-                              <a
-                                href="https://www.linkedin.com/in/meiring-van-niekerk"
-                                >https://www.linkedin.com/in/meiring-van-niekerk</a
-                              >
-                            </li>
-                            <li>
-                              <i class="fa-brands fa-github h4"></i> GitHub:
-                              <a href="https://github.com/Meiring47817909"
-                                >https://github.com/Meiring47817909</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card shadow-sm border-0">
-                      <div class="col p-4 d-flex flex-column position-static">
-                        <h2 class="text-decoration-underline">Hobby</h2>
-                        <p class="lead">
-                          <i class="fa-solid fa-bolt-lightning h4"></i> Squash —
-                          a fun, high-energy sport that challenges your
-                          reflexes, sharpens your focus, and keeps you fit! I am
-                          a member at
-                          <a
-                            href="https://community-services.blaauwberg.net/sport-clubs/squash-clubs-western-cape/kuilsriver-squash-club"
-                            >Kuils River Squash club.</a
-                          >
-                        </p>
-                      </div>
-                      <div class="col-auto d-sm-block flex">
-                        <img
-                          src="Images/Squash.avif"
-                          class="featurette-image"
-                          style="height: 200px; width: 100%"
-                          alt="img"
-                        />
-                      </div>
+                <div class="card shadow-sm">
+                  <img
+                    class="img-top"
+                    src="Images/potchpulse-dashboard.jpg"
+                    alt="Power BI command centre with a live map of water pressure sensors and the maintenance truck in Potchefstroom"
+                    loading="lazy"
+                  />
+                  <div class="card-body">
+                    <h3 class="text-decoration-underline">
+                      PotchPulse: Smart Water Infrastructure Monitoring
+                    </h3>
+                    <p class="card-text lead">
+                      A real-time streaming platform on Microsoft Azure that
+                      monitors Potchefstroom's water network. Simulated
+                      pressure sensors, a maintenance truck and citizen
+                      reports stream through Event Hubs and Stream Analytics
+                      into Cosmos DB, an Azure Function adds AI sentiment
+                      analysis, and Power BI shows a live command centre.
+                      Built for ITRI613 (Databases I).
+                    </p>
+                    <h4 style="text-align: left">Tech stack:</h4>
+                    <ul class="lead" style="text-align: left">
+                      <li>Python (sensor, social media and fleet simulation)</li>
+                      <li>Azure Event Hubs and Stream Analytics</li>
+                      <li>Azure Cosmos DB and Azure Functions</li>
+                      <li>Azure AI Language, Power BI (DirectQuery)</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-3 align-items-center">
+                      <a
+                        class="btn btn-lg btn-outline-secondary"
+                        href="https://github.com/Meiring47817909/potchpulse-swim"
+                        target="_blank"
+                        rel="noreferrer"
+                        >View repository</a
+                      >
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane fade show" id="cv">
-          <iframe
-            src="Meiring_van_Niekerk_CV.pdf"
-            frameborder="0"
-            style="display: block"
-            class="w-100 vh-100"
-          ></iframe>
-        </div>
-        <div class="tab-pane fade show" id="projects">
-          <div class="container pageMargin p-5">
-            <div class="row row-cols-1 row-cols-lg-2 g-5">
               <div class="col">
                 <div class="card shadow-sm">
                   <img src="Images/Dreamflix_Cinema.jpeg" alt="img" />
@@ -520,49 +487,157 @@
         </div>
       </div>
     </div>
-    <div
+    <!-- CV Assistant chat window (design: interactive_cv_chat_widget.html) -->
+    <section
       id="chat-container"
-      class="shadow-lg"
-      style="display: none; flex-direction: column"
+      class="chat-window"
+      role="dialog"
+      aria-label="CV Assistant"
+      aria-hidden="true"
     >
-      <div
-        id="chat-header"
-        class="d-flex justify-content-between align-items-center px-3 py-2 text-white"
-        style="background-color: #0d6efd"
-      >
-        <span><i class="fa-solid fa-robot me-2"></i>CV Assistant</span>
-        <button id="close-chat" class="btn btn-sm text-white">
-          <i class="fa-solid fa-minus"></i>
-        </button>
-      </div>
-      <div id="chat-messages" class="p-3 d-flex flex-column">
-        <div class="bot-message mb-2">
-          Hi! I'm Meiring's AI assistant. <strong>I'm currently a work in progress.</strong>
+      <div class="chat-header">
+        <div class="header-info">
+          <div class="bot-avatar-frame">
+            <span class="bot-avatar-crop" aria-hidden="true">
+              <dotlottie-wc
+                id="chat-avatar"
+                class="avatar-anim"
+                src="Images/chat-bot.lottie"
+                speed="0.8"
+              ></dotlottie-wc>
+            </span>
+            <span class="status-dot" aria-hidden="true"></span>
+          </div>
+          <div class="header-text">
+            <h3>CV Assistant <span class="beta-pill">AI Beta</span></h3>
+            <p>Online &amp; ready to answer</p>
+          </div>
         </div>
-      </div>
-      <div class="chat-input-area p-2 border-top">
-        <div class="input-group">
-          <input
-            type="text"
-            id="chat-input"
-            class="form-control form-control-sm"
-            placeholder="Type a question..."
-          />
-          <button class="btn btn-primary btn-sm" id="send-btn">
-            <i class="fa-solid fa-paper-plane"></i>
+        <div class="header-actions">
+          <button
+            type="button"
+            class="action-btn"
+            id="close-chat"
+            aria-label="Minimise chat"
+            title="Minimise"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
           </button>
         </div>
       </div>
-    </div>
+
+      <div class="chat-body" id="chat-messages" aria-live="polite">
+        <div class="message bot-msg">
+          Hi! I'm Meiring's AI assistant. Ask me anything about his technical
+          stack, portfolio projects, or career background, or ask me to open a
+          page for you.
+        </div>
+
+        <div class="chips-container" id="quick-chips">
+          <span class="chips-label">Quick questions:</span>
+          <button
+            type="button"
+            class="chip-btn"
+            data-prompt="What tech stack does Meiring specialize in?"
+          >
+            <span aria-hidden="true">⚡</span> Tech Stack &amp; Skills
+          </button>
+          <button
+            type="button"
+            class="chip-btn"
+            data-prompt="Show me Meiring's projects."
+          >
+            <span aria-hidden="true">🚀</span> Key Projects
+          </button>
+          <button
+            type="button"
+            class="chip-btn"
+            data-prompt="Open Meiring's CV."
+          >
+            <span aria-hidden="true">📄</span> Open the CV
+          </button>
+          <button
+            type="button"
+            class="chip-btn"
+            data-prompt="How can I contact Meiring directly?"
+          >
+            <span aria-hidden="true">📫</span> Contact Details
+          </button>
+        </div>
+
+        <div class="typing-indicator" id="typing-indicator" aria-label="The assistant is typing">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="chat-footer">
+        <form class="input-box" id="chat-form">
+          <label for="chat-input" class="visually-hidden">Ask a question about Meiring</label>
+          <input
+            type="text"
+            id="chat-input"
+            placeholder="Ask a question about Meiring..."
+            autocomplete="off"
+            maxlength="1000"
+          />
+          <!-- Shown by site.js only in browsers that support speech input -->
+          <button
+            type="button"
+            class="mic-btn"
+            id="mic-btn"
+            aria-label="Speak your question"
+            aria-pressed="false"
+            title="Speak your question"
+            hidden
+          >
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="2" width="6" height="12" rx="3"></rect>
+              <path d="M5 10v1a7 7 0 0 0 14 0v-1"></path>
+              <line x1="12" y1="18" x2="12" y2="22"></line>
+            </svg>
+          </button>
+          <button type="submit" class="send-btn" id="send-btn" aria-label="Send message" title="Send message">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </section>
 
     <button
       id="chat-toggle"
-      class="btn btn-primary shadow-lg rounded-circle"
-      style="display: none"
+      class="btn"
+      aria-label="Open the CV assistant"
+      aria-controls="chat-container"
+      aria-expanded="false"
     >
-      <i class="fa-solid fa-comment-dots h3 m-0"></i>
+      <span class="bot-frame" aria-hidden="true">
+        <!-- Played from site.js: one wave, then a pause -->
+        <dotlottie-wc
+          class="bot-anim"
+          src="Images/chat-bot.lottie"
+        ></dotlottie-wc>
+      </span>
+      <span class="bot-hint" aria-hidden="true">Ask me about Meiring</span>
     </button>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="site.js" asp-append-version="true"></script>
+    <!-- Render the bot's Markdown replies, then sanitise the HTML before display -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+    <!-- Animated robot on the chat button (dotLottie player) -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-wc@0.10.0/dist/dotlottie-wc.js"
+    ></script>
+    <!-- Animated aurora background (WebGL, no libraries) -->
+    <script src="aurora-bg.js" data-accent="#22D3EE" data-speed="1"></script>
+    <!-- PDF.js renders the CV so the assistant can highlight inside it -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="cv-viewer.js?v=2026-10-30b"></script>
+    <script src="site.js?v=2026-10-30b"></script>
   </body>
 </html>
