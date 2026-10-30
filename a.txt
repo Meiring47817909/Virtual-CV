@@ -1,0 +1,41 @@
+Meiring van Niekerk
+Software Developer
+Potchefstroom/Cape Town, South Africa
+
+meiring0505@gmail.com
+ID Document: South African Identity Card
+Driver's License: South African Code B (Light Motor Vehicle)
+Currently a BSc Hons candidate in Computer Science and IT at North-West University - Potchefstroom
+with an interest in agentic AI.
+
+Skills
+Teamwork and collaboration
+Problem-solving
+Git and GitHub
+Front end development
+Back-end development
+
+Experience
+Programming Languages:
+•
+•
+•
+•
+•
+
+C# and .NET
+Python
+React
+HTML, CSS, JavaScript
+SQL (Queries, Tables, Views, Triggers, Stored procedures)
+
+IDEs and Version Control:
+•
+•
+•
+
+VS Code
+Visual Studio Community 2022
+Git/GitHub
+
+
