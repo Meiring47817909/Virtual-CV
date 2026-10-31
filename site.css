@@ -423,6 +423,12 @@ h5 {
 .card > img.img-top {
   object-position: top;
 }
+/* Generated project covers (12:5): always shown whole, at any card width */
+.card > img.cover-art {
+  height: auto;
+  aspect-ratio: 12 / 5;
+  object-fit: cover;
+}
 
 /* Click-to-play video (loads the player only when asked) */
 .video-embed {

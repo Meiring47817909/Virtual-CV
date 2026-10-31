@@ -382,6 +382,108 @@
                   </div>
                 </div>
               </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img
+                    class="cover-art"
+                    src="Images/security-ml-cover.jpg"
+                    alt="ROC curve (AUC 0.88) and confusion matrix of the session intrusion model on its test set"
+                    loading="lazy"
+                  />
+                  <div class="card-body">
+                    <h3 class="text-decoration-underline">
+                      Store Session Security Monitor (ML in security)
+                    </h3>
+                    <p class="card-text lead">
+                      A machine-learning security project for an online store. A PyTorch neural network (MLP) scores every login session for intrusion risk (Low / Medium / High). An admin dashboard shows each session's attack probability and the likely threat pattern, with suggested preventive actions. On the test set it reached an AUC of 0.88 and 98% precision.
+                    </p>
+                    <h4 style="text-align: left">Tech stack:</h4>
+                    <ul class="lead" style="text-align: left">
+                      <li>PyTorch MLP, scikit-learn, pandas, Jupyter</li>
+                      <li>FastAPI model API hosted on Render (Docker)</li>
+                      <li>FastAPI + HTMX admin dashboard</li>
+                      <li>Kaggle intrusion dataset (9,537 sessions), pytest</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-3 align-items-center">
+                      <a
+                        class="btn btn-lg btn-outline-secondary"
+                        href="https://github.com/Meiring47817909/Security_ML_Project"
+                        target="_blank"
+                        rel="noreferrer"
+                        >View repository</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img
+                    class="cover-art"
+                    src="Images/tsoro-yematatu-cover.jpg"
+                    alt="Tsoro Yematatu board and a chart of the trained agent's results against earlier checkpoints"
+                    loading="lazy"
+                  />
+                  <div class="card-body">
+                    <h3 class="text-decoration-underline">
+                      Tsoro Yematatu: reinforcement learning
+                    </h3>
+                    <p class="card-text lead">
+                      The traditional African board game Tsoro Yematatu, with a Q-learning agent that learns entirely through self-play. One table plays both sides, a small penalty per turn rewards quick wins, and a 50-turn cap prevents stalling. In a tournament against its own earlier versions, the trained agent draws almost every game, a sign of near-optimal play. Includes a Tkinter GUI to play against the AI.
+                    </p>
+                    <h4 style="text-align: left">Tech stack:</h4>
+                    <ul class="lead" style="text-align: left">
+                      <li>Python</li>
+                      <li>Tabular Q-learning (temporal-difference updates)</li>
+                      <li>Tkinter GUI</li>
+                      <li>Checkpoint tournament and training profiling (CSV / Excel)</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-3 align-items-center">
+                      <a
+                        class="btn btn-lg btn-outline-secondary"
+                        href="https://github.com/Meiring47817909/Tsoro_Yematatu"
+                        target="_blank"
+                        rel="noreferrer"
+                        >View repository</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img
+                    class="cover-art"
+                    src="Images/campus-marketplace-cover.jpg"
+                    alt="Architecture: Angular frontend, API gateway, marketplace service and SQLite database"
+                    loading="lazy"
+                  />
+                  <div class="card-body">
+                    <h3 class="text-decoration-underline">
+                      Campus Marketplace (microservices)
+                    </h3>
+                    <p class="card-text lead">
+                      A campus marketplace where students buy products and administrators manage the catalogue. An Angular frontend talks to a secure API gateway (JWT login, Admin and Student roles, rate limiting, CORS and security logging), which forwards requests to a marketplace microservice backed by SQLite.
+                    </p>
+                    <h4 style="text-align: left">Tech stack:</h4>
+                    <ul class="lead" style="text-align: left">
+                      <li>Angular 17</li>
+                      <li>Node.js and Express API gateway (http-proxy-middleware)</li>
+                      <li>JWT, bcrypt, express-rate-limit, Winston logging</li>
+                      <li>SQLite</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-3 align-items-center">
+                      <a
+                        class="btn btn-lg btn-outline-secondary"
+                        href="https://github.com/Meiring47817909/CampusMarketplace"
+                        target="_blank"
+                        rel="noreferrer"
+                        >View repository</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <h2 class="project-year">2025</h2>
             <div class="row row-cols-1 row-cols-lg-2 g-5">
